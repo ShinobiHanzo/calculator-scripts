@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+
+float persistance;
+float initial;
+float rate;
+float x;
+float result_print;
+
+int main(void)
+{
+    printf("please aeneter your numbers:\n");
+    printf(" N ");
+    scanf_s("%f", &persistance);
+    printf("\n===");
+    printf("\n>>  r");
+    scanf_s("%f", &rate);
+    printf("\n===");
+    printf("\ni=?");
+    scanf_s("%f", &initial);
+    printf("\nplease enter your equation numnber: ");
+    scanf_s("%f", &x);
+    result_print = x;
+    for (size_t i = initial; i < persistance; i += rate)
+    {
+        result_print += i;
+        //Sleep(5);
+        printf("\nlog: %3d, %f", i, result_print);
+    }
+    printf("\nstart: %f \nrate: %.2f \nend: %f \nresult: %.2f", initial, rate, persistance, result_print);
+}
